@@ -1,20 +1,21 @@
 # sense-input-variable
 
-Input box for sense variables.
-The user can modify the content of a variable by editing this input.
+Allow the user to set the value of a variable in an options set
 
 #Configuration
 this extension need 7 parameter for working:
 
 variable name: the name of the variable to controll
 
-type: number or string.
+option values: it must be a list of options separed by commas. it could be the result of an expression, ex: =Concat(distinct field,',') or a comma separed list of values ex: 1,2,3,4 .
+
+option descriptions: it must be a list of options descriptions separed by commas, this array must be ordered in the samy way as the option values array. it could be the result of an expression. if not present whil be used the value as description.
 
 title: a string that tells the user what is the variable.
 
 help text: a string that help the user.
 
-text to add before/after input: a useful parameter for defining UM ov the variable or similar info.
+input type: if drop down is selected the user must select a value from a drop down list. if checkboxes is selected all the options are draw in a list, useful with less options.
 
 disable input: if it is empty the user can modify the value other whise it is not possible. it could be an expression ex: =if(getPossibleCount(field)=1,'',true())
 
