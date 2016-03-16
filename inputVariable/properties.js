@@ -31,10 +31,10 @@ define( [], function () {
 
 	// variable Panel
 	var variablePanel = {
+		label: "Variable",
 		items: {
 			variable: {
 				type: "items",
-				label: "Variable",
 				items: {
 					variableName: variableName,
 					variableType: variableType
@@ -86,8 +86,9 @@ define( [], function () {
 	};
 
 	var appearancePanel = {
+		label: "Settings",
 		items: {
-			label: "Settings",
+			uses:"settings",
 			settings: {
 				type: "items",
 				label: "Settings",

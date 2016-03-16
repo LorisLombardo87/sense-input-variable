@@ -40,6 +40,14 @@ function ($, qlik, props, initProps, extensionUtils, cssContent, template) {
                 }
             } );
            
+            $scope.charInput = function(e){
+                //console.log('press',e);
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if(code == 13) { //Enter keycode
+                    $scope.changeVar();
+                }
+            };
+
             $scope.changeVar = function(){
                 //alert($('#input-'+$scope.layout.props.variableName).val());
                 var d = $scope.layout.props.disabled+'';
